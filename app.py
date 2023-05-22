@@ -14,6 +14,12 @@ def home_page():
     return render_template('index.html')
 
 
+@app.route('/blog')
+def blog():
+    # creating plotly figure and passing it to index.html, use sql query to get data from database
+    return render_template('blog.html')
+
+
 # specifiying host and port
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=8888)
