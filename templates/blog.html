@@ -51,9 +51,19 @@
 
                             </a>
                             </h4>
-                            <h4 class="text-center md:text-left text-lg pb-4">
-                                <a href="https://mohammadc.herokuapp.com/" target="_blank">go home!</a>
+                            <h4 class="text-center md:text-left text-lg pb-4" onclick="redirectToHome(event)">
+                                <b>go home</b>
                             </h4>
+
+                            <script>
+                                function redirectToHome(event) {
+                                    var clickedText = event.target.textContent;
+                                    if (clickedText.includes('go home')) {
+                                        window.location.href = "https://mohammadc.herokuapp.com/";
+                                    }
+                                }
+                            </script>
+
                         </div>
 
 
